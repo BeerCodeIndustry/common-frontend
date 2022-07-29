@@ -16,7 +16,7 @@ export enum Font {
   POPPINS_BOLD = 'POPPINS_BOLD',
 }
 
-export const getFont = (font: Font): string => {
+export const getFont = (font?: Font): string => {
   return fonts[font ?? Font.SANS]
 }
 
