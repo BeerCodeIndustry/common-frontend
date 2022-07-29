@@ -24,6 +24,7 @@ export const Wrapper = styled.div<{ backgroundColor: Color }>`
   height: 100vh;
   width: 100%;
   z-index: 10;
+  user-select: none;
   background: ${({ backgroundColor }) =>
     getColorWithOpacity(backgroundColor, Opacity._80)};
 `
@@ -46,6 +47,7 @@ export const Content = styled.div<{
 `
 
 export const Cross = styled(cross)`
+  user-select: none;
   position: absolute;
   right: 1rem;
   top: 1rem;

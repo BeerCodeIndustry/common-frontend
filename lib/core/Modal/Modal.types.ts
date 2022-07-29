@@ -7,4 +7,5 @@ export interface ModalProps {
   modalBackgroundColor: Color
   backgroundColor: Color
   children: ReactNode
+  onClose: () => void
 }
