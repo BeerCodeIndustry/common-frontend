@@ -1,6 +1,6 @@
 {
   "name": "@beer-code-industry/common-frontend",
-  "version": "0.7.2",
+  "version": "0.7.4",
   "private": false,
   "description": "All components, styles and functionality shared between frontend projects.",
   "main": "dist/index.js",
@@ -10,7 +10,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "webpack",
-    "publish": "yarn build && npm publish --access=public"
+    "publish-build": "yarn build && npm publish --access=public"
   },
   "dependencies": {
     "@beer-code-industry/common-icons": "^1.3.1",
