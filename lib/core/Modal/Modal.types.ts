@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
-import { ModalSize } from '../../theme/layout'
+
 import { Color } from '../../theme/color'
+import { ModalSize } from '../../theme/layout'
 
 export interface ModalProps {
   size: ModalSize

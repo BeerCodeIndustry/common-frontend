@@ -1,12 +1,12 @@
-import React from 'react'
 import { storiesOf } from '@storybook/react'
+import React from 'react'
 
-import { Typography, typographies } from '../../lib/theme/typography'
-import { Font, fonts } from '../../lib/theme/font'
 import { Flexbox } from '../../lib/core/Flexbox'
 import { FontTypoText } from '../../lib/core/FontTypoText'
+import { Font, fonts } from '../../lib/theme/font'
+import { Typography, typographies } from '../../lib/theme/typography'
 
-const Container = ({ font }: { font: Font }) => {
+const Container: React.FC<{ font: Font }> = ({ font }) => {
   return (
     <Flexbox flexDirection="column">
       {Object.keys(typographies).map((typo) => (

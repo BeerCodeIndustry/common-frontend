@@ -1,4 +1,5 @@
 import React, { SyntheticEvent } from 'react'
+
 import { Wrapper, Content, Cross } from './Modal.styles'
 import { ModalProps } from './Modal.types'
 
@@ -9,7 +10,7 @@ export const Modal: React.FC<ModalProps> = ({
   backgroundColor,
   onClose,
 }) => {
-  const stopPropogation = (e: SyntheticEvent) => {
+  const stopPropogation = (e: SyntheticEvent): void => {
     e.stopPropagation()
   }
 

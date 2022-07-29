@@ -1,6 +1,6 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { storiesOf } from '@storybook/react'
+import React from 'react'
 
 import { Modal } from '../../lib/core/Modal'
 import { Color, colors } from '../../lib/theme/color'
@@ -19,7 +19,7 @@ storiesOf('Core', module).add(
       size: ModalSize.SMALL,
       modalBackgroundColor: Color.BLUE_200,
       backgroundColor: Color.BLACK,
-      onClose: () => console.log('modal close'),
+      onClose: action('modal close'),
     },
     argTypes: {
       size: {

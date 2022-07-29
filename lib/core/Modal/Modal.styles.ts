@@ -1,4 +1,6 @@
+import { cross } from '@beer-code-industry/common-icons'
 import styled from 'styled-components'
+
 import {
   getColorWithOpacity,
   getColor,
@@ -11,7 +13,6 @@ import {
   getModalSizeAsPixels,
   ModalSize,
 } from '../../theme/layout'
-import { cross } from '@beer-code-industry/common-icons'
 
 export const Wrapper = styled.div<{ backgroundColor: Color }>`
   display: flex;

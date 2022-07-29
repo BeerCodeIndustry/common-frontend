@@ -8,5 +8,5 @@ export const FlexboxContainer = styled.div<FlexboxProps>`
   align-items: ${(p) => p.alignItems};
   align-self: ${(p) => p.alignSelf};
   flex-direction: ${(p) => p.flexDirection};
-  gap: ${(p) => `${p.gap}px`};
+  gap: ${(p) => `${p.gap ?? 0}px`};
 `

@@ -1,8 +1,9 @@
-import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Font, fonts } from '../../lib/theme/font'
+import React from 'react'
+
 import { Flexbox } from '../../lib/core/Flexbox'
 import { FontTypoText } from '../../lib/core/FontTypoText'
+import { Font, fonts } from '../../lib/theme/font'
 
 storiesOf('Theme', module).add('Fonts', () => (
   <Flexbox flexDirection="column">
