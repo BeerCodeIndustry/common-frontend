@@ -7,7 +7,6 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import url from '@rollup/plugin-url'
 import css from 'rollup-plugin-import-css'
 import external from 'rollup-plugin-node-externals'
-import postcss from 'rollup-plugin-postcss'
 
 const packageJson = require('./package.json')
 
@@ -32,7 +31,6 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
-      postcss(),
       terser(),
       url(),
       css(),
