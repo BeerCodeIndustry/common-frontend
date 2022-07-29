@@ -1,3 +1,4 @@
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Font, fonts } from '../../lib/theme/font'
 import { Flexbox } from '../../lib/core/Flexbox'

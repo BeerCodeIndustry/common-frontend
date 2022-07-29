@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { colors, Color, getColor } from '../../lib/theme/color'

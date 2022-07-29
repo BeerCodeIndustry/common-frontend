@@ -1,3 +1,4 @@
+import React from 'react'
 import { FlexboxContainer } from './Flexbox.styles'
 import { FlexboxProps } from './Flexbox.types'
 

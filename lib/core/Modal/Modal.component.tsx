@@ -1,3 +1,4 @@
+import React from 'react'
 import { Wrapper, Content, Cross } from './Modal.styles'
 import { ModalProps } from './Modal.types'
 

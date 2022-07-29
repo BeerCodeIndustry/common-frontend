@@ -1,5 +1,5 @@
+import React from 'react'
 import { storiesOf } from '@storybook/react'
-import styled from 'styled-components'
 
 import { Modal } from '../../lib/core/Modal'
 import { Color, colors } from '../../lib/theme/color'
