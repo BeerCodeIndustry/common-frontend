@@ -7,11 +7,7 @@ import { Color, ModalSize, colors, modalSizes } from '../../lib/theme'
 
 storiesOf('Core', module).add(
   'Modal',
-  (modalProps: any) => (
-    <Modal {...modalProps}>
-      <span>ModalContent</span>
-    </Modal>
-  ),
+  (modalProps: any) => <Modal {...modalProps} />,
   {
     component: Modal,
     args: {
@@ -20,6 +16,7 @@ storiesOf('Core', module).add(
       backgroundColor: Color.BLACK,
       onClose: action('modal close'),
       crossColor: Color.GRAY_100,
+      children: <span>ModalContent</span>,
     },
     argTypes: {
       size: {
