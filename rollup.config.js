@@ -40,7 +40,7 @@ const config =  [
     external: ['react', 'react-dom', 'styled-components'],
   },
   {
-    input: 'dist/esm/index.d.ts',
+    input: 'dist/esm/lib/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     external: [/\.css$/],
     plugins: [dts()],
