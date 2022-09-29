@@ -28,12 +28,12 @@
   },
   "scripts": {
     "deps": "yarn && yarn prepare-husky",
+    "build-lib": "rollup -c",
+    "build-story": "build-storybook",
+    "publish-lib": "yarn build-lib && npm publish --access public",
+    "build-n-publish": "yarn build-story && yarn publish-lib",
     "start": "start-storybook -p 6006 -s public",
-    "publish-build": "yarn build && npm publish --access public",
-    "build-storybook": "build-storybook",
     "prepare-husky": "husky install",
-    "prebuild-r": "rd /s /q dist",
-    "build": "rollup -c",
     "lint": "tsc --noEmit && eslint --no-error-on-unmatched-pattern --ext .js,.ts,.tsx . --fix",
     "pre-commit": "npx --no-install lint-staged"
   },
