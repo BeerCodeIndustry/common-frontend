@@ -14,18 +14,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 'Checkout source code'
-        uses: 'actions/checkout@v2'
-        with:
-          # ref: ${{ github.ref }}
-          token: ${{ secrets.ACTION_TOKEN }}
-          fetch-depth: 0
-      - name: 'cat package.json'
-        run: cat ./package.json
-      - name: 'Setup Node.js'
-        uses: 'actions/setup-node@v1'
-        with:
-          node-version: 16
       - name: 'Automated Version Bump'
         id: version-bump
         uses: 'phips28/gh-action-bump-version@master'
@@ -33,9 +21,6 @@ jobs:
           tag-prefix: 'v'
         env:
           GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
-
-      - name: 'cat package.json'
-        run: cat ./package.json
       - name: 'Output Step'
         env:
           NEW_TAG: ${{ steps.version-bump.outputs.newTag }}
