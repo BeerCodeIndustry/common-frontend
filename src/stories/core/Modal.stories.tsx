@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import React from 'react'
 
 import { Modal } from '../../lib/core'
-import { Color, colors, ModalSize, modalSizes } from '../../lib/theme'
+import { Color, ModalSize, colors, modalSizes } from '../../lib/theme'
 
 storiesOf('Core', module).add(
   'Modal',
@@ -40,5 +40,5 @@ storiesOf('Core', module).add(
         control: { type: 'select' },
       },
     },
-  }
+  },
 )

@@ -1,4 +1,4 @@
-import { css, FlattenSimpleInterpolation } from 'styled-components'
+import { FlattenSimpleInterpolation, css } from 'styled-components'
 
 export enum Typography {
   XS = 'XS',

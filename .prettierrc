@@ -1,7 +1,11 @@
 {
-  "trailingComma": "es5",
+  "trailingComma": "all",
   "tabWidth": 2,
   "semi": false,
   "singleQuote": true,
-  "endOfLine": "auto"
+  "jsxSingleQuote": true,
+  "arrowParens": "avoid",
+  "importOrderSortSpecifiers": true,
+  "importOrderSeparation": true,
+  "importOrder": ["^@core/(.*)$", "<THIRD_PARTY_MODULES>", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"]
 }

@@ -2,12 +2,12 @@ import { cross } from '@beercode/common-icons'
 import styled from 'styled-components'
 
 import {
-  getColor,
   Color,
-  getMediaQuery,
-  ScreenSize,
-  getModalSize,
   ModalSize,
+  ScreenSize,
+  getColor,
+  getMediaQuery,
+  getModalSize,
 } from '../../theme'
 
 export const Wrapper = styled.div<{ backgroundColor: Color }>`

@@ -1,7 +1,8 @@
 import { storiesOf } from '@storybook/react'
+import React from 'react'
 import styled from 'styled-components'
 
-import { typographies, getTypography, Typography } from '../../lib/theme'
+import { Typography, getTypography, typographies } from '../../lib/theme'
 
 const TypographyBlock = styled.div<{ typography: Typography }>`
   ${({ typography }) => getTypography(typography)}
@@ -9,7 +10,7 @@ const TypographyBlock = styled.div<{ typography: Typography }>`
 
 storiesOf('Theme', module).add('Typographies', () => (
   <>
-    {Object.keys(typographies).map((typo) => (
+    {Object.keys(typographies).map(typo => (
       <TypographyBlock typography={typo as Typography}>{typo}</TypographyBlock>
     ))}
   </>

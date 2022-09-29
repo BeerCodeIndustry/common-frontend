@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { ModalSize, Color } from '../../theme'
+import { Color, ModalSize } from '../../theme'
 
 export interface ModalProps extends React.HTMLAttributes<HTMLElement> {
   size: ModalSize

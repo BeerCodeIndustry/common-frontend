@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { FlexboxProps } from './Flexbox.types'
 import { FlexboxContainer } from './Flexbox.styles'
+import { FlexboxProps } from './Flexbox.types'
 
 export const Flexbox: React.FC<FlexboxProps> = ({
   children,

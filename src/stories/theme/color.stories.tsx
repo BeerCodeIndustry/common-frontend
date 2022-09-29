@@ -1,13 +1,14 @@
 import { storiesOf } from '@storybook/react'
+import React from 'react'
 import styled from 'styled-components'
 
 import { Flexbox } from '../../lib/core'
 import {
   Color,
-  getColor,
   Typography,
-  getTypography,
   colors,
+  getColor,
+  getTypography,
 } from '../../lib/theme'
 
 const ColorBox = styled.div<{ color: Color }>`
@@ -23,7 +24,7 @@ const ColorTitle = styled.div`
 
 storiesOf('Theme', module).add('Colors', () => (
   <>
-    {Object.keys(colors).map((color) => (
+    {Object.keys(colors).map(color => (
       <Flexbox>
         <ColorTitle>{color}</ColorTitle>
         <ColorBox color={color as Color} />

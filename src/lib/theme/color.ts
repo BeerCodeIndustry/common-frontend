@@ -166,7 +166,7 @@ export enum Color {
 export enum Opacity {
   _10_ = '_10_',
   _20_ = '_20_',
-  _30_ = '_20_',
+  _30_ = '_30_',
   _40_ = '_40_',
   _50_ = '_50_',
   _60_ = '_60_',
@@ -184,15 +184,15 @@ export const getColorWithOpacity = (color: Color, opacity: Opacity): string => {
 }
 
 export const opacities: { [key in Opacity]: string } = {
-  [Opacity._90_]: 'E6',
-  [Opacity._80_]: 'CC',
-  [Opacity._70_]: 'B3',
-  [Opacity._60_]: '99',
-  [Opacity._50_]: '80',
-  [Opacity._40_]: '66',
-  [Opacity._30_]: '4D',
-  [Opacity._20_]: '33',
   [Opacity._10_]: '1A',
+  [Opacity._20_]: '33',
+  [Opacity._30_]: '4D',
+  [Opacity._40_]: '66',
+  [Opacity._50_]: '80',
+  [Opacity._60_]: '99',
+  [Opacity._70_]: 'B3',
+  [Opacity._80_]: 'CC',
+  [Opacity._90_]: 'E6',
 }
 
 export const colors: { [key in Color]: string } = {

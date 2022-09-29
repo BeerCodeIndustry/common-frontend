@@ -12,21 +12,30 @@
     "README.md"
   ],
   "publishConfig": {
-	  "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
     "@beercode/common-icons": "0.2.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
-    "typescript": "^4.8.3"
+    "typescript": "^4.8.3",
+    "@storybook/react": "^6.5.12",
+    "@storybook/addon-actions": "^6.5.12"
   },
   "scripts": {
+    "deps": "yarn && yarn prepare-husky",
     "start": "start-storybook -p 6006 -s public",
     "publish-build": "yarn build && npm publish --access public",
-    "build-storybook": "build-storybook -s public",
+    "build-storybook": "build-storybook",
+    "prepare-husky": "husky install",
     "prebuild-r": "rd /s /q dist",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "lint": "tsc --noEmit && eslint --no-error-on-unmatched-pattern --ext .js,.ts,.tsx . --fix",
+    "pre-commit": "npx --no-install lint-staged"
   },
   "eslintConfig": {
     "extends": [
@@ -57,17 +66,6 @@
     ]
   },
   "devDependencies": {
-    "web-vitals": "^2.1.4",
-    "webpack-node-externals": "^3.0.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.11.59",
-    "@types/react": "^18.0.20",
-    "@types/react-dom": "^18.0.6",
-    "@types/styled-components": "^5.1.26",
-    "clean-webpack-plugin": "^4.0.0",
     "@babel/core": "^7.19.1",
     "@babel/preset-env": "^7.19.1",
     "@babel/preset-react": "^7.18.6",
@@ -76,7 +74,6 @@
     "@rollup/plugin-node-resolve": "^14.1.0",
     "@rollup/plugin-typescript": "^8.5.0",
     "@rollup/plugin-url": "^7.0.0",
-    "@storybook/addon-actions": "^6.5.12",
     "@storybook/addon-essentials": "^6.5.12",
     "@storybook/addon-interactions": "^6.5.12",
     "@storybook/addon-links": "^6.5.12",
@@ -84,10 +81,22 @@
     "@storybook/manager-webpack5": "^6.5.12",
     "@storybook/node-logger": "^6.5.12",
     "@storybook/preset-create-react-app": "^4.1.2",
-    "@storybook/react": "^6.5.12",
     "@storybook/testing-library": "^0.0.13",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@trivago/prettier-plugin-sort-imports": "^3.3.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.59",
+    "@types/react": "^18.0.20",
+    "@types/react-dom": "^18.0.6",
+    "@types/styled-components": "^5.1.26",
     "babel-loader": "^8.2.5",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
+    "eslint": "^8.24.0",
     "prop-types": "^15.8.1",
     "rollup-plugin-cleanup": "^3.2.1",
     "rollup-plugin-dts": "^4.2.2",
@@ -97,7 +106,19 @@
     "rollup-plugin-styles": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "ts-loader": "^9.3.1",
+    "web-vitals": "^2.1.4",
     "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^4.10.0",
+    "webpack-node-externals": "^3.0.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.2.7",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.1"
   }
 }

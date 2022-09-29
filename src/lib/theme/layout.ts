@@ -23,7 +23,7 @@ export const getModalSize = (m: ModalSize): string => {
 
 export const getMediaQuery = (
   minWidth: ScreenSize,
-  maxWidth?: ScreenSize
+  maxWidth?: ScreenSize,
 ): string => {
   return `@media screen and (min-width: ${pixelate(breakpoints[minWidth])}) ${
     maxWidth ? `and (max-width: ${pixelate(breakpoints[maxWidth])})` : ''

@@ -19,9 +19,7 @@
     "outDir": "dist",
     "declarationDir": "types",
     "declaration": true,
-    "rootDir": "src/lib"
+    "rootDir": "src"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
