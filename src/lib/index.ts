@@ -1,5 +1,5 @@
-export * as Core from './core'
+export * as core from './core'
 export * from './core'
 
-export * as Theme from './theme'
+export * as theme from './theme'
 export * from './theme'
