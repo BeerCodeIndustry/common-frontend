@@ -183,7 +183,7 @@ export const getColorWithOpacity = (color: Color, opacity: Opacity): string => {
   return getColor(color) + opacities[opacity]
 }
 
-export const opacities: { [key in Opacity]: string } = {
+export const opacities: Record<Opacity, string> = {
   [Opacity._10_]: '1A',
   [Opacity._20_]: '33',
   [Opacity._30_]: '4D',
@@ -195,7 +195,7 @@ export const opacities: { [key in Opacity]: string } = {
   [Opacity._90_]: 'E6',
 }
 
-export const colors: { [key in Color]: string } = {
+export const colors: Record<Color, string> = {
   [Color.BLACK]: '#000000',
   [Color.WHITE]: '#ffffff',
   [Color.GRAY_50]: '#f9fafb',

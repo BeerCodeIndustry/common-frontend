@@ -6,3 +6,5 @@ export * from './typography'
 
 export * as ThemeLayout from './layout'
 export * from './layout'
+
+export * from './theme'
