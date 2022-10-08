@@ -19,13 +19,7 @@
     "outDir": "dist",
     "declarationDir": "types",
     "declaration": true,
-    "rootDir": "src",
-    "paths": {
-      "core/*": ["./src/lib/core/*"],
-      "theme/*": ["./src/lib/theme/*"],
-      "theme": ["./src/lib/theme/"],
-      "core": ["./src/lib/core/"]
-    }
+    "rootDir": "src"
   },
   "include": ["src"]
 }

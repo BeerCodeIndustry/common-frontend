@@ -1419,10 +1419,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@beercode/common-icons@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@beercode/common-icons/-/common-icons-0.2.0.tgz#a697d209b194f374fce0ce84067c17b2e2c6d411"
-  integrity sha512-26MziNsZIvDKd1NqZGCbhYeIyjjo1HHTBOP6LDvTxtgrzznWhmDHPAsawi/2VAPCzinfrD/xfEP1/fZ2fGTYUw==
+"@beercode/common-icons@latest":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@beercode/common-icons/-/common-icons-0.4.2.tgz#fed094a54c3f9454eba8175a2845a18e6f8cd055"
+  integrity sha512-2ol/nlzWCpgn0mb7HqkfZXCsnmJuC3KvMnPjetg8dj6I4wvRPObcwvToGnpO5GyXXo2m1gLgAMdPSCf+/uqQow==
   dependencies:
     "@types/styled-components" "^5.1.25"
     react "18.2.0"
@@ -1430,7 +1430,7 @@
     rollup "^2.77.2"
     styled-components "^5.3.5"
 
-"@beercode/common-utils@^0.2.0":
+"@beercode/common-utils@latest":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@beercode/common-utils/-/common-utils-0.2.0.tgz#b8c6aa4d622520d1e4c177788c73749bb0ce4d31"
   integrity sha512-VRo25+zusWT90EmirRfmHaIcOzsrdlNeb0qlZn7BfcyWrcGTB2Sl30Bj1+ySDD07P/CjGO/0h5K7OJijOb1Mig==

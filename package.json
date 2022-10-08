@@ -15,7 +15,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@beercode/common-icons": "0.2.0",
+    "@beercode/common-icons": "latest",
+    "@beercode/common-utils": "latest",
     "@storybook/addon-actions": "^6.5.12",
     "@storybook/react": "^6.5.12",
     "husky": "^8.0.1",
@@ -70,7 +71,6 @@
     "@babel/preset-env": "^7.19.1",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
-    "@beercode/common-utils": "^0.2.0",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",
     "@rollup/plugin-typescript": "^8.5.0",
