@@ -1,4 +1,4 @@
-import { common, social } from '@beercode/common-icons'
+import { common, filetype, social } from '@beercode/common-icons'
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 import styled from 'styled-components'
@@ -16,6 +16,7 @@ const IconBox = styled(Flexbox)`
 const icons: Record<string, Record<string, React.FC>> = {
   Common: common,
   Social: social,
+  Filetype: filetype,
 }
 
 storiesOf('Core', module).add('Icons', () => {

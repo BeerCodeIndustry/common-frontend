@@ -15,8 +15,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@beercode/common-icons": "latest",
-    "@beercode/common-utils": "latest",
+    "@beercode/common-icons": "^0.5.1",
+    "@beercode/common-utils": "^0.5.0",
     "@storybook/addon-actions": "^6.5.12",
     "@storybook/react": "^6.5.12",
     "husky": "^8.0.1",
