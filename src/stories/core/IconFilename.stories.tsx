@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/react'
 import React from 'react'
 
 import { IconFilename } from '../../lib/core'
-import { colors, typographies } from '../../lib/theme'
+import { IconSize, colors, iconsSizes, typographies } from '../../lib/theme'
 
 storiesOf('Core', module).add(
   'IconFilename',
@@ -22,6 +22,9 @@ storiesOf('Core', module).add(
   },
   {
     component: IconFilename,
+    args: {
+      size: IconSize.SM,
+    },
     argTypes: {
       color: {
         options: Object.keys(colors),
@@ -29,6 +32,10 @@ storiesOf('Core', module).add(
       },
       typography: {
         options: Object.keys(typographies),
+        control: { type: 'select' },
+      },
+      size: {
+        options: Object.keys(iconsSizes),
         control: { type: 'select' },
       },
     },

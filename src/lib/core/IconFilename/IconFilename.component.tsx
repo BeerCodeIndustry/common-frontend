@@ -37,6 +37,7 @@ const extensions = [
 
 export const IconFilename: React.FC<IconFilenameProps> = ({
   fullFilename,
+  size = IconSize.SM,
   ...textElementProps
 }) => {
   const SVG = useMemo(
@@ -46,7 +47,7 @@ export const IconFilename: React.FC<IconFilenameProps> = ({
 
   return (
     <Flexbox alignItems='center' gap={0.2}>
-      <Icon size={IconSize.SM}>{SVG}</Icon>
+      <Icon size={size}>{SVG}</Icon>
       <TextElement {...textElementProps}>{fullFilename}</TextElement>
     </Flexbox>
   )
