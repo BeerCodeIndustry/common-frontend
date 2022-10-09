@@ -12,8 +12,8 @@ export const Icon = styled(Flexbox)<IconProps>`
     svg {
       fill: ${getColor(color)};
 
-      path {
-        fill: ${getColor(color)};
+      line {
+        stroke: ${getColor(color)};
       }
     }
 

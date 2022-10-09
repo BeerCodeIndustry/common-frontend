@@ -4,7 +4,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { Flexbox, Icon as IconCore, TextElement } from '../../lib/core'
-import { Color, IconSize, Typography, iconsSizes } from '../../lib/theme'
+import {
+  Color,
+  IconSize,
+  Typography,
+  colors,
+  iconsSizes,
+} from '../../lib/theme'
 
 const IconBox = styled(Flexbox)``
 
@@ -45,6 +51,10 @@ storiesOf('Core', module).add(
     argTypes: {
       size: {
         options: Object.keys(iconsSizes),
+        control: { type: 'select' },
+      },
+      color: {
+        options: Object.keys(colors),
         control: { type: 'select' },
       },
     },
