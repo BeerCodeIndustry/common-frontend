@@ -1,1 +1,3 @@
 yarn deps
+
+yarn start
