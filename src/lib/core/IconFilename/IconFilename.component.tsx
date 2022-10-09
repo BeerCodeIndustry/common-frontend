@@ -42,7 +42,7 @@ export const IconFilename: React.FC<IconFilenameProps> = ({
 }) => {
   const SVG = useMemo(
     () => extensions.find(e => e.ext === getFileExt(fullFilename))?.Component,
-    [],
+    [fullFilename],
   )
 
   return (
