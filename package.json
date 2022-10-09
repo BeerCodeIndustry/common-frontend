@@ -15,7 +15,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@beercode/common-icons": "^0.5.5",
+    "@beercode/common-icons": "^0.6.1",
     "@beercode/common-utils": "^0.5.0",
     "@storybook/addon-actions": "^6.5.12",
     "@storybook/react": "^6.5.12",
@@ -28,6 +28,7 @@
     "typescript": "^4.8.3"
   },
   "scripts": {
+    "update": "yarn & yarn upgrade @beercode/common-utils @beercode/common-icons --latest",
     "deps": "yarn && yarn prepare-husky",
     "build-lib": "rollup -c",
     "build-story": "build-storybook",
