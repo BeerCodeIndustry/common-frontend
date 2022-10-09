@@ -1,3 +1,5 @@
+import { FlattenSimpleInterpolation, css } from 'styled-components'
+
 import { pixelate } from './helpers'
 
 export enum ScreenSize {
@@ -17,6 +19,14 @@ export enum ModalSize {
   XLARGE = 'XLARGE',
 }
 
+export enum IconSize {
+  XS = 'XS',
+  SM = 'SM',
+  BASE = 'BASE',
+  LG = 'LG',
+  XL = 'XL',
+}
+
 export enum SpacingType {
   XSMALL = 'MIN',
   SMALL = 'SMALL',
@@ -27,6 +37,10 @@ export enum SpacingType {
 
 export const getModalSize = (m: ModalSize): string => {
   return modalSizes[m]
+}
+
+export const getIconSize = (s: IconSize): FlattenSimpleInterpolation => {
+  return iconsSizes[s]
 }
 
 export const getMediaQuery = (
@@ -61,4 +75,37 @@ export const spacings: Record<SpacingType, string> = {
   [SpacingType.MEDIUM]: pixelate(16),
   [SpacingType.LARGE]: pixelate(24),
   [SpacingType.XLARGE]: pixelate(32),
+}
+
+export const iconsSizes: Record<IconSize, FlattenSimpleInterpolation> = {
+  [IconSize.XS]: css`
+    svg {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+  `,
+  [IconSize.SM]: css`
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  `,
+  [IconSize.BASE]: css`
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  `,
+  [IconSize.LG]: css`
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  `,
+  [IconSize.XL]: css`
+    svg {
+      width: 3rem;
+      height: 3rem;
+    }
+  `,
 }
