@@ -84,6 +84,7 @@
     "react/prop-types": "off",
     "react/destructuring-assignment": "off",
     "no-underscore-dangle": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
     "react/function-component-definition": [
       "error",
       {

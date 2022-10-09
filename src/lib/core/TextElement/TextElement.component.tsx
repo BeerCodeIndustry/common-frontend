@@ -1,16 +1,9 @@
-import React from 'react'
+import styled from 'styled-components'
 
-import { Span } from './TextElement.styles'
+import { getColor, getTypography } from '../../theme'
 import { TextElementProps } from './TextElement.types'
 
-export const TextElement: React.FC<TextElementProps> = ({
-  children,
-  typography,
-  color,
-}) => {
-  return (
-    <Span typography={typography} color={color}>
-      {children}
-    </Span>
-  )
-}
+export const TextElement = styled.span<TextElementProps>`
+  ${({ color }) => color && `color: ${getColor(color)};`}
+  ${({ typography }) => typography && getTypography(typography)}
+`

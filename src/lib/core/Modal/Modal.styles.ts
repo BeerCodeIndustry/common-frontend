@@ -1,4 +1,4 @@
-import { cross } from '@beercode/common-icons'
+import { Cross as CrossSVG } from '@beercode/common-icons'
 import styled from 'styled-components'
 
 import {
@@ -42,7 +42,7 @@ export const Content = styled.div<{
   }
 `
 
-export const Cross = styled(cross)<{ crossColor: Color }>`
+export const Cross = styled(CrossSVG)<{ crossColor: Color }>`
   user-select: none;
   position: absolute;
   right: 1rem;
