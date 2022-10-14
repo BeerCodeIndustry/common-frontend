@@ -26,7 +26,9 @@ storiesOf('Theme', module).add('Colors', () => (
   <>
     {Object.keys(colors).map(color => (
       <Flexbox>
-        <ColorTitle>{color}</ColorTitle>
+        <ColorTitle>
+          {color}({getColor(color as Color)})
+        </ColorTitle>
         <ColorBox color={color as Color} />
       </Flexbox>
     ))}
