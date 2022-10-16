@@ -20,6 +20,13 @@ storiesOf('Core', module).add(
         options: Object.keys(typographies),
         control: { type: 'select' },
       },
+      hover: {
+        options: Object.keys(colors),
+        control: { type: 'select' },
+      },
+      cursor: {
+        control: 'boolean',
+      },
     },
   },
 )

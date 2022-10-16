@@ -5,3 +5,4 @@
 /storybook-static
 rollup.config.js
 lint-staged.config.js
+.eslintrc.js
