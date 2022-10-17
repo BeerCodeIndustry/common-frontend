@@ -163,6 +163,8 @@ export enum Color {
   ROSE_900 = 'ROSE_900',
 }
 
+export type ColorWithOpacity = [Color, Opacity]
+
 export enum Opacity {
   _10_ = '_10_',
   _20_ = '_20_',
@@ -175,7 +177,11 @@ export enum Opacity {
   _90_ = '_90_',
 }
 
-export const getColor = (color: Color): string => {
+export const getColor = (color?: Color | ColorWithOpacity): string => {
+  if (!color) return colors.BLACK
+
+  if (Array.isArray(color)) return getColorWithOpacity(...color)
+
   return colors[color]
 }
 

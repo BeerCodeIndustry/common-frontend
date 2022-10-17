@@ -1,12 +1,12 @@
 import { ReactNode } from 'react'
 
-import { Color, ModalSize } from '../../theme'
+import { Color, ColorWithOpacity, ModalSize } from '../../theme'
 
 export interface ModalProps extends React.HTMLAttributes<HTMLElement> {
   size: ModalSize
-  modalColor: Color
-  backgroundColor: Color
+  modalColor: Color | ColorWithOpacity
+  backgroundColor: Color | ColorWithOpacity
   children: ReactNode
   onClose: () => void
-  crossColor?: Color
+  crossColor?: Color | ColorWithOpacity
 }

@@ -2,15 +2,17 @@ import { Cross as CrossSVG } from '@beercode/common-icons'
 import styled from 'styled-components'
 
 import {
-  Color,
   ModalSize,
   ScreenSize,
   getColor,
   getMediaQuery,
   getModalSize,
 } from '../../theme'
+import { ModalProps } from './Modal.types'
 
-export const Wrapper = styled.div<{ backgroundColor: Color }>`
+export const Wrapper = styled.div<{
+  backgroundColor: ModalProps['backgroundColor']
+}>`
   display: flex;
   cursor: pointer;
   position: fixed;
@@ -26,8 +28,8 @@ export const Wrapper = styled.div<{ backgroundColor: Color }>`
 `
 
 export const Content = styled.div<{
-  size: ModalSize
-  modalColor: Color
+  size: ModalProps['size']
+  modalColor: ModalProps['modalColor']
 }>`
   position: relative;
   padding: 2rem 2rem;
@@ -42,7 +44,7 @@ export const Content = styled.div<{
   }
 `
 
-export const Cross = styled(CrossSVG)<{ crossColor: Color }>`
+export const Cross = styled(CrossSVG)<{ crossColor: ModalProps['crossColor'] }>`
   user-select: none;
   position: absolute;
   right: 1rem;
