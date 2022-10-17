@@ -57,7 +57,7 @@ export const breakpoints: Record<ScreenSize, string> = {
   [ScreenSize.SMALL]: pixelate(540),
   [ScreenSize.MEDIUM]: pixelate(768),
   [ScreenSize.LARGE]: pixelate(1024),
-  [ScreenSize.XLARGE]: pixelate(1400),
+  [ScreenSize.XLARGE]: pixelate(1440),
   [ScreenSize.MAX]: pixelate(1920),
 }
 
