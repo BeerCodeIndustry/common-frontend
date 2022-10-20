@@ -12,20 +12,15 @@ storiesOf('Core', module).add(
     component: Sidebar,
     args: {
       isOpen: true,
-      direction: 'end',
+      direction: 'right',
       sidebarColor: Color.BLUE_200,
-      backgroundColor: Color.BLACK,
       onClose: action('modal close'),
       crossColor: Color.GRAY_100,
       children: <span>SidebarContent</span>,
     },
     argTypes: {
       direction: {
-        options: ['start', 'end'],
-        control: { type: 'select' },
-      },
-      backgroundColor: {
-        options: Object.keys(colors),
+        options: ['left', 'right'],
         control: { type: 'select' },
       },
       sidebarColor: {
