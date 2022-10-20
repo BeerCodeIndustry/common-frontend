@@ -1,24 +1,18 @@
 import { Cross as CrossSVG } from '@beercode/common-icons'
 import styled from 'styled-components'
 
-import {
-  ScreenSize,
-  getColor,
-  getDirection,
-  getMediaQuery,
-  getPosition,
-} from '../../theme'
-import { hide, show } from '../../theme/animations'
+import { ScreenSize, getColor, getMediaQuery } from '../../theme'
+import { show } from '../../theme/animations'
 import { SidebarProps } from './Sidebar.types'
 
 export const Wrapper = styled.div<{
   backgroundColor: SidebarProps['backgroundColor']
-  sidebarDirection: SidebarProps['sidebarDirection']
+  direction: SidebarProps['direction']
 }>`
   display: flex;
   cursor: pointer;
   position: fixed;
-  justify-content: ${({ sidebarDirection }) => getPosition(sidebarDirection)};
+  justify-content: ${({ direction }) => direction};
   top: 0;
   left: 0;
   height: 100vh;
@@ -30,21 +24,21 @@ export const Wrapper = styled.div<{
 
 export const Content = styled.div<{
   sidebarColor: SidebarProps['sidebarColor']
-  sidebarDirection: SidebarProps['sidebarDirection']
+  direction: SidebarProps['direction']
   isOpen: SidebarProps['isOpen']
 }>`
   position: relative;
   padding: 2rem 2rem;
   border-radius: 0.5rem;
   background: ${({ sidebarColor }) => getColor(sidebarColor)};
-  width: 18.75rem;
+  width: 15.625rem;
   ${getMediaQuery(ScreenSize.MOBAIL, ScreenSize.SMALL)} {
     width: 100%;
   }
-  animation: ${({ sidebarDirection, isOpen }) =>
+  animation: ${({ direction, isOpen }) =>
       isOpen
-        ? show(getDirection(sidebarDirection))
-        : hide(getDirection(sidebarDirection))}
+        ? show(direction === 'end' ? '20rem' : '-20rem', '0')
+        : show('0', direction === 'end' ? '20rem' : '-20rem')}
     250ms ease 0s 1 normal forwards;
 `
 

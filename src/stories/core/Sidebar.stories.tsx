@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import React from 'react'
 import { Sidebar } from 'src/lib/core/Sidebar'
 
-import { Color, Position, colors, positions } from '../../lib/theme'
+import { Color, colors } from '../../lib/theme'
 
 storiesOf('Core', module).add(
   'Sidebar',
@@ -12,7 +12,7 @@ storiesOf('Core', module).add(
     component: Sidebar,
     args: {
       isOpen: true,
-      sidebarDirection: Position.LEFT,
+      direction: 'end',
       sidebarColor: Color.BLUE_200,
       backgroundColor: Color.BLACK,
       onClose: action('modal close'),
@@ -20,8 +20,8 @@ storiesOf('Core', module).add(
       children: <span>SidebarContent</span>,
     },
     argTypes: {
-      sidebarDirection: {
-        options: Object.keys(positions),
+      direction: {
+        options: ['start', 'end'],
         control: { type: 'select' },
       },
       backgroundColor: {

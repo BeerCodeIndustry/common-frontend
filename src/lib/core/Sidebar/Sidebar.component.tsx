@@ -6,7 +6,7 @@ import { SidebarProps } from './Sidebar.types'
 
 export const Sidebar: React.FC<SidebarProps> = ({
   isOpen,
-  sidebarDirection,
+  direction,
   children,
   sidebarColor,
   backgroundColor,
@@ -20,14 +20,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
   return (
     <Wrapper
-      sidebarDirection={sidebarDirection}
+      direction={direction}
       backgroundColor={backgroundColor}
       onClick={onClose}
       {...otherProps}
     >
       <Content
         isOpen={isOpen}
-        sidebarDirection={sidebarDirection}
+        direction={direction}
         sidebarColor={sidebarColor}
         onClick={stopPropogation}
       >
