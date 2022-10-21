@@ -24,7 +24,7 @@ storiesOf('Core', module).add(
         options: Object.keys(colors),
         control: { type: 'select' },
       },
-      cursor: {
+      hasCursor: {
         control: 'boolean',
       },
     },
