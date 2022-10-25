@@ -163,7 +163,11 @@ export enum Color {
   ROSE_900 = 'ROSE_900',
 }
 
-export type ColorWithOpacity = [Color, Opacity]
+export type ColorWithOpacity = [AnyColor, AnyOpacity]
+
+export type AnyOpacity = Opacity | string
+
+export type AnyColor = Color | string
 
 export enum Opacity {
   _10_ = '_10_',
@@ -177,16 +181,27 @@ export enum Opacity {
   _90_ = '_90_',
 }
 
-export const getColor = (color?: Color | ColorWithOpacity): string => {
-  if (!color) return colors.BLACK
-
+export const getColor = (
+  color: AnyColor | ColorWithOpacity = colors.BLACK,
+): string => {
   if (Array.isArray(color)) return getColorWithOpacity(...color)
+
+  if (typeof color === 'string') return color
 
   return colors[color]
 }
 
-export const getColorWithOpacity = (color: Color, opacity: Opacity): string => {
-  return getColor(color) + opacities[opacity]
+export const getColorWithOpacity = (
+  color: AnyColor,
+  opacity: AnyOpacity,
+): string => {
+  return getColor(color) + getOpacity(opacity)
+}
+
+export const getOpacity = (opacity: AnyOpacity): string => {
+  if (typeof opacity === 'string') return opacity
+
+  return opacities[opacity]
 }
 
 export const opacities: Record<Opacity, string> = {
