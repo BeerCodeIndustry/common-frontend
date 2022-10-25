@@ -1,8 +1,8 @@
-import { AnyColor, Typography } from '../../theme'
+import { AnyColorWithOpacity, Typography } from '../../theme'
 
 export interface TextElementProps {
   typography?: Typography
-  color?: AnyColor
-  hover?: AnyColor
+  color?: AnyColorWithOpacity
+  hover?: AnyColorWithOpacity
   hasCursor?: boolean
 }

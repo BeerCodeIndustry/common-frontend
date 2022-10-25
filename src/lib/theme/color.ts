@@ -169,6 +169,8 @@ export type AnyOpacity = Opacity | string
 
 export type AnyColor = Color | string
 
+export type AnyColorWithOpacity = AnyColor | ColorWithOpacity
+
 export enum Opacity {
   _10_ = '_10_',
   _20_ = '_20_',
