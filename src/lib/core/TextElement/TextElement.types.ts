@@ -4,5 +4,5 @@ export interface TextElementProps {
   typography?: Typography
   color?: AnyColor
   hover?: AnyColor
-  cursor?: boolean
+  hasCursor?: boolean
 }
