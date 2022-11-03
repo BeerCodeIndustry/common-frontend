@@ -13,7 +13,7 @@ import {
 } from './NestedMenu.styles'
 import {
   NestedMenuProps,
-  NestedArrayType,
+  Nested,
   NestedLinksType,
   RenderNestedMenuType,
 } from './NestedMenu.types'
@@ -34,7 +34,7 @@ export const RenderNestedMenu: React.FC<RenderNestedMenuType> = ({
   )
 }
 
-export const NestedArray: React.FC<NestedArrayType> = ({ label, nested }) => {
+export const NestedArray: React.FC<Nested> = ({ label, nested }) => {
   const [isOpen, toggleOpen] = useToggle(false)
   const onClick = (e: React.MouseEvent<HTMLElement>): void => {
     toggleOpen()
