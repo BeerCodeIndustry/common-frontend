@@ -1,12 +1,15 @@
 import React from 'react'
 import { useToggle } from '@beercode/common-utils'
+import { Flexbox } from '../Flexbox'
 import {
   ButtonDrop,
   Menu,
-  DropArr,
   DownArrow,
   UpArrow,
   FlexboxLink,
+  DropMenu,
+  DropMenuRight,
+  ButtonLink,
 } from './NestedMenu.styles'
 import {
   NestedMenuProps,
@@ -44,7 +47,9 @@ export const NestedArray: React.FC<NestedArrayType> = ({ label, nested }) => {
         <ButtonDrop>{label}</ButtonDrop>
         {isOpen ? <DownArrow /> : <UpArrow />}
       </FlexboxLink>
-      <DropArr>{isOpen && <RenderNestedMenu nested={nested} />}</DropArr>
+      <DropMenuRight>
+        {isOpen && <RenderNestedMenu nested={nested} />}
+      </DropMenuRight>
     </>
   )
 }
@@ -57,10 +62,7 @@ export const NestedLinks: React.FC<NestedLinksType> = ({ label }) => {
   )
 }
 
-export const NestedMenu: React.FC<NestedMenuProps> = ({
-  arrayNested,
-  dropdown,
-}) => {
+export const NestedMenu: React.FC<NestedMenuProps> = ({ arrayNested }) => {
   const [isOpen, toggleOpen] = useToggle(false)
   const onClick = (e: React.MouseEvent<HTMLElement>): void => {
     toggleOpen()
@@ -68,12 +70,22 @@ export const NestedMenu: React.FC<NestedMenuProps> = ({
   }
 
   return (
-    <>
-      <FlexboxLink onClick={onClick}>
-        <ButtonDrop>{dropdown}</ButtonDrop>
-        {isOpen ? <DownArrow /> : <UpArrow />}
-      </FlexboxLink>
-      <Menu>{isOpen && <RenderNestedMenu nested={arrayNested} />}</Menu>
-    </>
+    <Menu>
+      {arrayNested.map(links =>
+        Array.isArray(links.nested) ? (
+          <Flexbox>
+            <Flexbox onClick={onClick}>
+              <ButtonLink>{links.label}</ButtonLink>
+              {isOpen ? <DownArrow /> : <UpArrow />}
+              <DropMenu>
+                {isOpen && <RenderNestedMenu nested={links.nested} />}
+              </DropMenu>
+            </Flexbox>
+          </Flexbox>
+        ) : (
+          <ButtonLink>{links.label}</ButtonLink>
+        ),
+      )}
+    </Menu>
   )
 }

@@ -8,40 +8,31 @@ storiesOf('Core', module).add(
   {
     component: NestedMenu,
     args: {
-      dropdown: 'DropDown',
       arrayNested: [
         {
-          label: 'HTML',
+          label: 'Practicum',
           nested: [
             {
-              label: 'A',
+              label: 'HTML',
               nested: [
                 {
-                  label: 'A1',
+                  label: 'A',
                 },
                 {
-                  label: 'A2',
+                  label: 'A',
                 },
               ],
             },
             {
-              label: 'B',
+              label: 'CSS',
             },
           ],
         },
         {
-          label: 'CSS',
+          label: 'IDE',
         },
         {
-          label: 'JS',
-          nested: [
-            {
-              label: 'C',
-            },
-            {
-              label: 'D',
-            },
-          ],
+          label: 'About Us',
         },
       ],
     },
