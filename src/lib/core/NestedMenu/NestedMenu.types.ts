@@ -1,5 +1,3 @@
-import React from 'react'
-
 export interface Nested {
   label?: string
   link?: string
@@ -7,15 +5,9 @@ export interface Nested {
 }
 
 export interface NestedLinksType {
-  label?: string
-  link?: string
-}
-
-export interface RenderNestedMenuType {
   nested?: Nested[]
 }
 
-export interface NestedMenuProps extends React.HTMLAttributes<HTMLElement> {
+export interface RenderNestedType {
   arrayNested: Nested[]
-  dropdown: string
 }

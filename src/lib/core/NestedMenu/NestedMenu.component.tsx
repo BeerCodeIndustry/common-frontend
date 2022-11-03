@@ -11,16 +11,9 @@ import {
   DropMenuRight,
   ButtonLink,
 } from './NestedMenu.styles'
-import {
-  NestedMenuProps,
-  Nested,
-  NestedLinksType,
-  RenderNestedMenuType,
-} from './NestedMenu.types'
+import { RenderNestedType, Nested, NestedLinksType } from './NestedMenu.types'
 
-export const RenderNestedMenu: React.FC<RenderNestedMenuType> = ({
-  nested,
-}) => {
+export const RenderNestedMenu: React.FC<NestedLinksType> = ({ nested }) => {
   return (
     <>
       {nested?.map(arr =>
@@ -54,7 +47,7 @@ export const NestedArray: React.FC<Nested> = ({ label, nested }) => {
   )
 }
 
-export const NestedLinks: React.FC<NestedLinksType> = ({ label }) => {
+export const NestedLinks: React.FC<Nested> = ({ label }) => {
   return (
     <FlexboxLink>
       <ButtonDrop>{label}</ButtonDrop>
@@ -62,7 +55,7 @@ export const NestedLinks: React.FC<NestedLinksType> = ({ label }) => {
   )
 }
 
-export const NestedMenu: React.FC<NestedMenuProps> = ({ arrayNested }) => {
+export const NestedMenu: React.FC<RenderNestedType> = ({ arrayNested }) => {
   const [isOpen, toggleOpen] = useToggle(false)
   const onClick = (e: React.MouseEvent<HTMLElement>): void => {
     toggleOpen()

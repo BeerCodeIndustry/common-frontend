@@ -1,38 +1,39 @@
 import styled from 'styled-components'
 import { ChevronDown, ChevronRight } from '@beercode/common-icons'
+import { colors } from 'src/lib/theme'
 import { Flexbox } from '../Flexbox'
 
 export const Menu = styled.div`
   display: flex;
   justify-content: space-around;
   position: relative;
-  color: #000;
+  color: ${colors.BLACK};
   list-style: none;
 `
 export const ButtonDrop = styled.a`
   display: block;
-  color: #fff;
+  color: ${colors.WHITE};
 `
 export const ButtonLink = styled.a`
   display: block;
-  color: #000;
+  color: ${colors.BLACK};
   &:hover {
     transition: 1s;
-    color: #259942;
+    color: ${colors.ORANGE_600};
     cursor: pointer;
   }
 `
 export const DropMenu = styled.div`
   position: absolute;
   top: 100%;
-  background-color: #000;
-  color: #fff;
+  background-color: ${colors.BLACK};
+  color: ${colors.WHITE};
 `
 export const DropMenuRight = styled.div`
   position: absolute;
   top: 0;
   left: 101%;
-  background-color: #000;
+  background-color: ${colors.BLACK};
 `
 export const DownArrow = styled(ChevronRight)`
   width: 0.5rem;
