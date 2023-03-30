@@ -1426,10 +1426,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@beercode/common-icons@^0.6.1":
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/@beercode/common-icons/-/common-icons-0.6.1.tgz#d850595af91d54e80272b138d8e3d48e78bc0ee9"
-  integrity sha512-uQTGRO4C7K++G+l0zMy1GeJJjL4o0Nfp4wnaoyiGmQtfHiza+H4av22w0+jVlSpkUrw6bGekEluxouD7jB2yoQ==
+"@beercode/common-icons@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@beercode/common-icons/-/common-icons-0.7.0.tgz#a2e5b9c6fc89c0e831e6a37e860d94e8b7aa86bf"
+  integrity sha512-NCkFIxq3/qz/agyWOtPC1vJE7nGJOrSALLCSyojSLt12NbVMlMC3zk6nzjKfjpEyXkxFq8cQCvsVJ0bjoe/5zA==
   dependencies:
     "@types/styled-components" "^5.1.25"
     react "18.2.0"

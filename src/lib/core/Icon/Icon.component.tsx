@@ -15,6 +15,10 @@ export const Icon = styled(Flexbox)<IconProps>`
       line {
         stroke: ${getColor(color)};
       }
+      path {
+        stroke: ${getColor(color)};
+        fill: ${getColor(color)};
+      }
     }
 
   `}
