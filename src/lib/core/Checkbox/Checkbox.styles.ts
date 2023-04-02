@@ -1,6 +1,6 @@
-import { Color, getColor } from 'lib/theme'
 import styled from 'styled-components'
 
+import { Color, getColor } from '../../theme'
 import { CheckboxSize, getCheckboxSize } from './lib/utils'
 
 export const Input = styled.label<{
