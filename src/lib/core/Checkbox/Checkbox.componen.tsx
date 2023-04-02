@@ -1,5 +1,5 @@
 import { ArrowChecked } from '@beercode/common-icons'
-import React, { useEffect, useState } from 'react'
+import React, { MouseEvent, useEffect, useState } from 'react'
 
 import { Icon } from '../Icon'
 import { Input } from './Checkbox.styles'
@@ -20,8 +20,8 @@ export const Checkbox: React.FC<CheckboxProps> = ({
     setChecked(checked)
   }, [checked])
 
-  const handleClick = (): void => {
-    if (onCheck) onCheck(isChecked)
+  const handleClick = (e: MouseEvent<HTMLElement>): void => {
+    if (onCheck) onCheck(e, isChecked)
     setChecked(!isChecked)
   }
 
