@@ -35,6 +35,7 @@ module.exports = {
         exceptAfterSingleLine: true,
       },
     ],
+    '@typescript-eslint/no-redeclare': 'off',
     '@typescript-eslint/consistent-type-definitions': 'error',
     '@typescript-eslint/consistent-type-assertions': 'error',
     '@typescript-eslint/no-unnecessary-condition': 'error',

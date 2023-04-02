@@ -14,7 +14,7 @@
     "isolatedModules": true,
     "jsx": "react",
     "incremental": true,
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "sourceMap": true,
     "outDir": "dist",
     "declarationDir": "types",

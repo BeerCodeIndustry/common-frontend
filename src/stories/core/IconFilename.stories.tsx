@@ -1,8 +1,7 @@
 import { storiesOf } from '@storybook/react'
+import { IconFilename } from 'lib/core'
+import { IconSize, iconsSizes, typographies } from 'lib/theme'
 import React from 'react'
-
-import { IconFilename } from '../../lib/core'
-import { IconSize, iconsSizes, typographies } from '../../lib/theme'
 
 storiesOf('Core', module).add(
   'IconFilename',

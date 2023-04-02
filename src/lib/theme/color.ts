@@ -162,7 +162,6 @@ export const Color = {
   ROSE_800: 'ROSE_800',
   ROSE_900: 'ROSE_900',
 } as const
-// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Color = typeof Color[keyof typeof Color]
 
 export const Opacity = {
@@ -176,7 +175,6 @@ export const Opacity = {
   80: '80',
   90: '90',
 } as const
-// eslint-disable-next-line @typescript-eslint/no-redeclare
 export type Opacity = typeof Opacity[keyof typeof Opacity]
 
 export type ColorWithOpacity = [Color, Opacity]

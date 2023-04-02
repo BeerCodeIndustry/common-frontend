@@ -1,9 +1,8 @@
 import { action } from '@storybook/addon-actions'
 import { storiesOf } from '@storybook/react'
+import { Sidebar } from 'lib/core'
+import { Color, colors } from 'lib/theme'
 import React from 'react'
-import { Sidebar } from 'src/lib/core/Sidebar'
-
-import { Color, colors } from '../../lib/theme'
 
 storiesOf('Core', module).add(
   'Sidebar',

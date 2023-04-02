@@ -19,13 +19,14 @@ export enum ModalSize {
   XLARGE = 'XLARGE',
 }
 
-export enum IconSize {
-  XS = 'XS',
-  SM = 'SM',
-  BASE = 'BASE',
-  LG = 'LG',
-  XL = 'XL',
-}
+export const IconSize = {
+  XS: 'XS',
+  SM: 'SM',
+  BASE: 'BASE',
+  LG: 'LG',
+  XL: 'XL',
+} as const
+export type IconSize = typeof IconSize[keyof typeof IconSize]
 
 export enum SpacingType {
   XSMALL = 'MIN',
